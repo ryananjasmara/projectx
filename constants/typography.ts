@@ -5,11 +5,11 @@
  */
 
 export const FontWeights = {
-  light: "Inter_300Light",
-  regular: "Inter_400Regular",
-  medium: "Inter_500Medium",
-  semibold: "Inter_600SemiBold",
-  bold: "Inter_700Bold",
+  light: 'Inter_300Light',
+  regular: 'Inter_400Regular',
+  medium: 'Inter_500Medium',
+  semibold: 'Inter_600SemiBold',
+  bold: 'Inter_700Bold',
 } as const;
 
 export const TextVariants = {
@@ -35,16 +35,13 @@ export const TextVariants = {
   },
 } as const;
 
-export const DefaultVariantWeight: Record<
-  keyof typeof TextVariants,
-  keyof typeof FontWeights
-> = {
-  display: "semibold",
-  heading: "semibold",
-  body: "regular",
-  label: "regular",
+export const DefaultVariantWeight: Record<keyof typeof TextVariants, keyof typeof FontWeights> = {
+  display: 'semibold',
+  heading: 'semibold',
+  body: 'regular',
+  label: 'regular',
 };
 
 export type TextVariant = keyof typeof TextVariants;
-export type TextSize = keyof (typeof TextVariants)["display"];
+export type TextSize = keyof (typeof TextVariants)['display'];
 export type TextWeight = keyof typeof FontWeights;
